@@ -1,9 +1,13 @@
-# **Sentiment-Driven Returns: PRIO3 (PetroRio) 2015 – 2024**
+# 📈 Sentiment-Driven Returns: PRIO3 (PetroRio) 2015 – 2024
+
+**Technologies** │ Python • Pandas • SpaCy • Transformers (FinBERT-PT-BR) • yfinance • Matplotlib • Seaborn • Statsmodels • SciPy
 
 ---
 
 ## 1 | Introduction
-This project asks whether the **tone of Brazilian news headlines** contains a tradeable signal for PetroRio’s shares (ticker **PRIO3**).
+Brazil’s independent oil producer PetroRio S.A. (ticker PRIO3) moved from penny-stock to Ibovespa heavyweight in less than a decade.
+During that climb its newsflow exploded—earnings beats, field acquisitions, OPEC shocks, regulatory twists.
+**Can the tone of those headlines help explain (or even predict) the stock’s price action?**
 
 * Scrape Portuguese headlines (2015-2024)  
 * Score tone with **FinBERT-PT-BR** → `compound ∈ {-0.5, 0, +0.5}`  
@@ -43,8 +47,8 @@ python -m spacy download pt_core_news_sm
 python -m nltk.downloader vader_lexicon
 
 # 3) scrape & clean
-python src/scrape/scraping_news.py
-python src/scrape/scraping_prices.py
+python src/scrape/scrap_news.py
+python src/scrape/scrap_prices.py
 python src/clean/clean_news.py
 python src/clean/clean_prices.py
 
@@ -53,4 +57,4 @@ python -m src.nlp.apply_sentiment
 python analysis/merge.py
 
 # 5) open notebook
-jupyter lab                 # notebook/prio3_sentiment.ipynb
+jupyter lab                 # notebook/main_analysis.ipynb
