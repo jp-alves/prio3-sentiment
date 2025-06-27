@@ -9,6 +9,10 @@ Brazil’s independent oil producer PetroRio S.A. (ticker PRIO3) moved from penn
 During that climb its newsflow exploded—earnings beats, field acquisitions, OPEC shocks, regulatory twists.
 **Can the tone of those headlines help explain (or even predict) the stock’s price action?**
 
+<p align="center">
+  <img src="image.png" width="600">
+</p>
+
 * Scrape Portuguese headlines (2015-2024)  
 * Score tone with **FinBERT-PT-BR** → `compound ∈ {-0.5, 0, +0.5}`  
 * Build daily features: `compound_mean`, `compound_mag`, `art_count`  
